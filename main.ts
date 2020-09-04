@@ -153,3 +153,43 @@ scene.setBackgroundImage(img`
 log.setPosition(20, 60)
 log.setFlag(SpriteFlag.StayInScreen, true)
 controller.moveSprite(log, 40, 40)
+let rocks = sprites.create(img`
+    . . . . . . . . . b b b b . . .
+    . . . . . . b b b d d d d b . .
+    . . . . . . b d d d d d d b . .
+    . . . . b b d d d d d b b d . .
+    . . . . b d d d d d d b b d b .
+    . . . . c d d d d d b b d b c .
+    . . . b c c b b b b d d b c c .
+    . . b b c c c b d d b c c c c .
+    . b b d d d b b b b b b c c c c
+    . c d d d d d d b d b c c c b c
+    . c b d d d b b d b c c c b b c
+    c b c c c c b d d b b b b b c c
+    c c b b b d d b c c b b b b c c
+    c c c c c c c c c b b b b c c .
+    . c c c c b b b b b b b c c . .
+    . . . . c c c c c c c c . . . .
+`)
+let rocks2 = sprites.create(img`
+    . . . . . c c b b b . . . . . .
+    . . . . c b d d d d b . . . . .
+    . . . . c d d d d d d b b . . .
+    . . . . c d d d d d d d d b . .
+    . . . c b b d d d d d d d b . .
+    . . . c b b d d d d d d d b . .
+    . c c c c b b b b d d d b b b .
+    . c d d b c b b b b b b b b d b
+    c b b d d d b b b b b d d b d b
+    c c b b d d d d d d d b b b d c
+    c b c c c b b b b b b b d d c c
+    c c b b c c c c b d d d b c c b
+    . c c c c c c c c c c c b b b b
+    . . c c c c c b b b b b b b c .
+    . . . . . . c c b b b b c c . .
+    . . . . . . . . c c c c . . . .
+`)
+rocks.setPosition(scene.screenWidth(), randint(0, scene.screenHeight()))
+rocks.setVelocity(-50, 0)
+rocks2.setPosition(scene.screenWidth(), randint(0, scene.screenHeight()))
+rocks2.setVelocity(-50, 0)

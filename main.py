@@ -154,3 +154,43 @@ scene.set_background_image(img("""
 log.set_position(20, 60)
 log.set_flag(SpriteFlag.STAY_IN_SCREEN, True)
 controller.move_sprite(log, 40, 40)
+rocks = sprites.create(img("""
+    . . . . . . . . . b b b b . . .
+    . . . . . . b b b d d d d b . .
+    . . . . . . b d d d d d d b . .
+    . . . . b b d d d d d b b d . .
+    . . . . b d d d d d d b b d b .
+    . . . . c d d d d d b b d b c .
+    . . . b c c b b b b d d b c c .
+    . . b b c c c b d d b c c c c .
+    . b b d d d b b b b b b c c c c
+    . c d d d d d d b d b c c c b c
+    . c b d d d b b d b c c c b b c
+    c b c c c c b d d b b b b b c c
+    c c b b b d d b c c b b b b c c
+    c c c c c c c c c b b b b c c .
+    . c c c c b b b b b b b c c . .
+    . . . . c c c c c c c c . . . .
+"""))
+rocks2 = sprites.create(img("""
+    . . . . . c c b b b . . . . . .
+    . . . . c b d d d d b . . . . .
+    . . . . c d d d d d d b b . . .
+    . . . . c d d d d d d d d b . .
+    . . . c b b d d d d d d d b . .
+    . . . c b b d d d d d d d b . .
+    . c c c c b b b b d d d b b b .
+    . c d d b c b b b b b b b b d b
+    c b b d d d b b b b b d d b d b
+    c c b b d d d d d d d b b b d c
+    c b c c c b b b b b b b d d c c
+    c c b b c c c c b d d d b c c b
+    . c c c c c c c c c c c b b b b
+    . . c c c c c b b b b b b b c .
+    . . . . . . c c b b b b c c . .
+    . . . . . . . . c c c c . . . .
+"""))
+rocks.set_position(scene.screen_width(), randint(0, scene.screen_height()))
+rocks.set_velocity(-50, 0)
+rocks2.set_position(scene.screen_width(), randint(0, scene.screen_height()))
+rocks2.set_velocity(-50, 0)
